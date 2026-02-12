@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useState } from "react"
 
 interface GalleryItem {
@@ -42,6 +41,7 @@ export function Gallery({ gallery }: GalleryProps) {
                   ? "bg-orange-600 text-white"
                   : "bg-muted hover:bg-muted/80"
               }`}
+              aria-pressed={filter === category}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
@@ -54,7 +54,7 @@ export function Gallery({ gallery }: GalleryProps) {
               key={item.id}
               className="group relative aspect-square overflow-hidden rounded-lg bg-muted"
             >
-              {/* Placeholder for images */}
+              {/* Placeholder for images with lazy loading */}
               <div className="flex h-full items-center justify-center bg-gradient-to-br from-orange-100 to-amber-100 dark:from-orange-950 dark:to-amber-950">
                 <span className="text-sm text-muted-foreground">{item.alt}</span>
               </div>

@@ -6,13 +6,15 @@ import { Gallery } from "@/components/gallery";
 import { Testimonials } from "@/components/testimonials";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { ServiceWorkerRegistration } from "@/components/service-worker-registration";
 import contentData from "@/data/content.json";
 
 export default function Home() {
   return (
     <>
+      <ServiceWorkerRegistration />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero restaurant={contentData.restaurant} />
         <About restaurant={contentData.restaurant} />
         <Menu menu={contentData.menu} />
