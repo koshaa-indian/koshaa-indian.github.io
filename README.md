@@ -85,4 +85,4 @@ To set up the Cloudflare Worker:
 
 ## License
 
-All rights reserved © 2024 Koshaa Restaurant
+All rights reserved © Koshaa Restaurant
