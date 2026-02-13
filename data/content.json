@@ -258,5 +258,10 @@
       "alt": "Vegetarian thali platter",
       "category": "food"
     }
-  ]
+  ],
+  "banner": {
+    "enabled": true,
+    "image": "/images/banner/special-offer.svg",
+    "alt": "Special Offer - Get 20% off on your first order!"
+  }
 }

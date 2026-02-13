@@ -53,6 +53,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 }
 

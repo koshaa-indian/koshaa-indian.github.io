@@ -7,12 +7,14 @@ import { Testimonials } from "@/components/testimonials";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { ServiceWorkerRegistration } from "@/components/service-worker-registration";
+import { BannerPopover } from "@/components/banner-popover";
 import contentData from "@/data/content.json";
 
 export default function Home() {
   return (
     <>
       <ServiceWorkerRegistration />
+      <BannerPopover banner={contentData.banner} />
       <Header />
       <main id="main-content">
         <Hero restaurant={contentData.restaurant} />
