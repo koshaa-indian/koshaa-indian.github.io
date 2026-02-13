@@ -45,6 +45,20 @@ export function BannerPopover({ banner }: BannerPopoverProps) {
     }
   }, [isOpen])
 
+  // Handle keyboard events
+  useEffect(() => {
+    if (!isOpen) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        handleClose()
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [isOpen])
+
   if (!banner.enabled || !isOpen) {
     return null
   }
@@ -85,10 +99,9 @@ export function BannerPopover({ banner }: BannerPopoverProps) {
               fill
               className="object-cover"
               priority
-              onError={(e) => {
-                // Fallback if image fails to load
-                const target = e.target as HTMLImageElement
-                target.style.display = "none"
+              onError={() => {
+                // Close banner if image fails to load
+                handleClose()
               }}
             />
           </div>
