@@ -1,0 +1,262 @@
+{
+  "restaurant": {
+    "name": "Koshaa",
+    "tagline": "Authentic Indian Cuisine in Ontario",
+    "description": "Experience the rich flavors of traditional Indian cuisine, crafted with love and authentic spices.",
+    "phone": "+1 (XXX) XXX-XXXX",
+    "email": "koshaarestaurant@gmail.com",
+    "address": {
+      "street": "123 Main Street",
+      "city": "Toronto",
+      "province": "ON",
+      "postalCode": "M5V 2T6",
+      "country": "Canada"
+    },
+    "hours": [
+      {
+        "day": "Monday",
+        "hours": "11:00 AM - 10:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "11:00 AM - 10:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "11:00 AM - 10:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "11:00 AM - 10:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "11:00 AM - 11:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "11:00 AM - 11:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "12:00 PM - 9:00 PM"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Koshaa - Authentic Indian Restaurant in Ontario",
+    "description": "Experience authentic Indian cuisine at Koshaa. Fresh ingredients, traditional recipes, and exceptional service in the heart of Ontario.",
+    "keywords": "Indian restaurant, authentic Indian food, Ontario restaurant, Indian cuisine, curry, tandoori, biryani",
+    "ogImage": "/images/og-image.jpg"
+  },
+  "menu": {
+    "categories": [
+      {
+        "id": "appetizers",
+        "name": "Appetizers",
+        "items": [
+          {
+            "id": "samosa",
+            "name": "Vegetable Samosa",
+            "description": "Crispy pastry filled with spiced potatoes and peas",
+            "price": 6.99,
+            "vegetarian": true,
+            "vegan": true,
+            "spicy": 1
+          },
+          {
+            "id": "pakora",
+            "name": "Mixed Pakora",
+            "description": "Assorted vegetables in chickpea batter, deep fried",
+            "price": 7.99,
+            "vegetarian": true,
+            "vegan": true,
+            "spicy": 1
+          },
+          {
+            "id": "chicken-tikka",
+            "name": "Chicken Tikka",
+            "description": "Tender chicken pieces marinated in yogurt and spices",
+            "price": 9.99,
+            "vegetarian": false,
+            "spicy": 2
+          }
+        ]
+      },
+      {
+        "id": "curries",
+        "name": "Curries",
+        "items": [
+          {
+            "id": "butter-chicken",
+            "name": "Butter Chicken",
+            "description": "Tender chicken in creamy tomato sauce with butter and spices",
+            "price": 15.99,
+            "vegetarian": false,
+            "spicy": 1,
+            "popular": true
+          },
+          {
+            "id": "palak-paneer",
+            "name": "Palak Paneer",
+            "description": "Cottage cheese in creamy spinach sauce",
+            "price": 13.99,
+            "vegetarian": true,
+            "spicy": 1
+          },
+          {
+            "id": "lamb-vindaloo",
+            "name": "Lamb Vindaloo",
+            "description": "Spicy lamb curry with potatoes in tangy sauce",
+            "price": 16.99,
+            "vegetarian": false,
+            "spicy": 3
+          },
+          {
+            "id": "chana-masala",
+            "name": "Chana Masala",
+            "description": "Chickpeas cooked in aromatic spices and tomatoes",
+            "price": 12.99,
+            "vegetarian": true,
+            "vegan": true,
+            "spicy": 2
+          }
+        ]
+      },
+      {
+        "id": "biryani",
+        "name": "Biryani",
+        "items": [
+          {
+            "id": "chicken-biryani",
+            "name": "Chicken Biryani",
+            "description": "Fragrant basmati rice with spiced chicken",
+            "price": 14.99,
+            "vegetarian": false,
+            "spicy": 2,
+            "popular": true
+          },
+          {
+            "id": "veg-biryani",
+            "name": "Vegetable Biryani",
+            "description": "Fragrant basmati rice with mixed vegetables",
+            "price": 12.99,
+            "vegetarian": true,
+            "vegan": true,
+            "spicy": 1
+          }
+        ]
+      },
+      {
+        "id": "breads",
+        "name": "Breads",
+        "items": [
+          {
+            "id": "naan",
+            "name": "Plain Naan",
+            "description": "Traditional Indian flatbread baked in tandoor",
+            "price": 2.99,
+            "vegetarian": true
+          },
+          {
+            "id": "garlic-naan",
+            "name": "Garlic Naan",
+            "description": "Naan topped with garlic and cilantro",
+            "price": 3.49,
+            "vegetarian": true,
+            "popular": true
+          },
+          {
+            "id": "roti",
+            "name": "Tandoori Roti",
+            "description": "Whole wheat flatbread",
+            "price": 2.49,
+            "vegetarian": true,
+            "vegan": true
+          }
+        ]
+      },
+      {
+        "id": "desserts",
+        "name": "Desserts",
+        "items": [
+          {
+            "id": "gulab-jamun",
+            "name": "Gulab Jamun",
+            "description": "Sweet milk dumplings in rose-flavored syrup",
+            "price": 5.99,
+            "vegetarian": true
+          },
+          {
+            "id": "kheer",
+            "name": "Rice Kheer",
+            "description": "Traditional rice pudding with cardamom",
+            "price": 4.99,
+            "vegetarian": true
+          }
+        ]
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "rating": 5,
+      "text": "The butter chicken is absolutely divine! Best Indian food I've had in Ontario. The staff is incredibly welcoming and the atmosphere is perfect.",
+      "date": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "rating": 5,
+      "text": "Authentic flavors that remind me of my travels in India. The biryani is perfectly spiced and the naan is always fresh. Highly recommend!",
+      "date": "2024-01-20"
+    },
+    {
+      "id": 3,
+      "name": "Priya Patel",
+      "rating": 5,
+      "text": "Finally found a place that makes authentic Indian food! The spice levels are perfect and they accommodate dietary restrictions well.",
+      "date": "2024-02-01"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "src": "/images/gallery/interior-1.jpg",
+      "alt": "Modern restaurant interior with warm lighting",
+      "category": "interior"
+    },
+    {
+      "id": 2,
+      "src": "/images/gallery/food-1.jpg",
+      "alt": "Butter chicken with naan and rice",
+      "category": "food"
+    },
+    {
+      "id": 3,
+      "src": "/images/gallery/food-2.jpg",
+      "alt": "Assorted Indian appetizers",
+      "category": "food"
+    },
+    {
+      "id": 4,
+      "src": "/images/gallery/interior-2.jpg",
+      "alt": "Cozy dining area",
+      "category": "interior"
+    },
+    {
+      "id": 5,
+      "src": "/images/gallery/food-3.jpg",
+      "alt": "Fresh tandoori breads",
+      "category": "food"
+    },
+    {
+      "id": 6,
+      "src": "/images/gallery/food-4.jpg",
+      "alt": "Vegetarian thali platter",
+      "category": "food"
+    }
+  ]
+}
