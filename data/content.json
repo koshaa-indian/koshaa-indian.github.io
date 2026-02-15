@@ -1,4 +1,5 @@
 {
+  "theme": { "name": "Koshaa" },
   "restaurant": {
     "name": "Koshaa",
     "tagline": "Authentic Indian Cuisine in Ontario",
@@ -41,7 +42,11 @@
         "day": "Sunday",
         "hours": "12:00 PM - 9:00 PM"
       }
-    ]
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/KoshaaFineIndianCuisine/",
+      "instagram": "https://www.instagram.com/koshaarestaurant"
+    }
   },
   "seo": {
     "title": "Koshaa - Authentic Indian Restaurant in Ontario",
@@ -49,7 +54,54 @@
     "keywords": "Indian restaurant, authentic Indian food, Ontario restaurant, Indian cuisine, curry, tandoori, biryani",
     "ogImage": "/images/og-image.jpg"
   },
+  "pages": {
+    "about": {
+      "title": "Our Story",
+      "subtitle": "The people, place, and philosophy behind Koshaa",
+      "restaurant": {
+        "heading": "Koshaa Fine Indian Cuisine",
+        "intro": "At Koshaa, we aspire to bring authentic traditional Indian flavors to the heart of the Parklawn–Lakeshore area. Our aim is to serve dishes that pay homage to India's rich cultural history, with a focus on exquisite Indian delicacies and exceptional service in a contemporary, family-friendly setting. As enthusiastic food connoisseurs, we believe in curating every dish to perfection.",
+        "koshaaMeaning": {
+          "intro": "'Koshaa' is derived from Sanskrit and describes five layers of the body:",
+          "layers": ["Food", "Energy", "Mind", "Intuition", "Bliss"],
+          "philosophy": "In ancient teachings, each Koshaa brings a person to complete awareness of their true self. Our hope is that through the experience of our food we take you on a similar journey—peeling the layers that speak to your palate until you reach flavorsome bliss."
+        },
+        "menuNote": "Our menu is curated to bring the authenticity of Indian cuisine to your table, freshly prepared every day using high-quality local ingredients.",
+        "image": "/images/restaurant.png",
+        "imageAlt": "Koshaa restaurant interior and dining"
+      },
+      "chef": {
+        "heading": "Meet the Chef",
+        "name": "Ushmeet",
+        "role": "Executive Chef & Co-Owner",
+        "image": "/images/founder.jpg",
+        "imageAlt": "Ushmeet, Executive Chef and Co-Owner of Koshaa",
+        "intro": "With more than 10 years of full-time experience in the food industry, Ushmeet is the executive chef and co-owner of the restaurant.",
+        "career": "He started his career as a chef at Hilton hotels in India and has since served as Head Chef at various hotels and restaurants in Toronto, including a well-known Indian restaurant on the Danforth and in the Entertainment District.",
+        "education": "Ushmeet has studied food as part of his graduation and post-graduation. He is a hospitality graduate from the International Institute of Hotel Management in India and holds a post-graduation in Culinary Management from George Brown College in Toronto, which equipped him with a deep understanding of the Canadian food industry and culture."
+      }
+    },
+    "menu": {
+      "title": "Our Menu",
+      "subtitle": "View and download our full menu"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "A glimpse into our restaurant and culinary creations"
+    },
+    "reservation": {
+      "title": "Reserve a Table",
+      "subtitle": "Book your dining experience with us"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with us for reservations or any inquiries",
+      "reservationCta": "Reserve a Table",
+      "reservationCtaDescription": "Book your dining experience with us online."
+    }
+  },
   "menu": {
+    "pdfUrl": "/menu.pdf",
     "categories": [
       {
         "id": "appetizers",
@@ -204,64 +256,60 @@
       "name": "Sarah Johnson",
       "rating": 5,
       "text": "The butter chicken is absolutely divine! Best Indian food I've had in Ontario. The staff is incredibly welcoming and the atmosphere is perfect.",
-      "date": "2024-01-15"
+      "date": "2026-01-15"
     },
     {
       "id": 2,
       "name": "Michael Chen",
       "rating": 5,
       "text": "Authentic flavors that remind me of my travels in India. The biryani is perfectly spiced and the naan is always fresh. Highly recommend!",
-      "date": "2024-01-20"
+      "date": "2026-01-20"
     },
     {
       "id": 3,
       "name": "Priya Patel",
       "rating": 5,
       "text": "Finally found a place that makes authentic Indian food! The spice levels are perfect and they accommodate dietary restrictions well.",
-      "date": "2024-02-01"
+      "date": "2026-02-01"
     }
   ],
   "gallery": [
-    {
-      "id": 1,
-      "src": "/images/gallery/interior-1.jpg",
-      "alt": "Modern restaurant interior with warm lighting",
-      "category": "interior"
-    },
-    {
-      "id": 2,
-      "src": "/images/gallery/food-1.jpg",
-      "alt": "Butter chicken with naan and rice",
-      "category": "food"
-    },
-    {
-      "id": 3,
-      "src": "/images/gallery/food-2.jpg",
-      "alt": "Assorted Indian appetizers",
-      "category": "food"
-    },
-    {
-      "id": 4,
-      "src": "/images/gallery/interior-2.jpg",
-      "alt": "Cozy dining area",
-      "category": "interior"
-    },
-    {
-      "id": 5,
-      "src": "/images/gallery/food-3.jpg",
-      "alt": "Fresh tandoori breads",
-      "category": "food"
-    },
-    {
-      "id": 6,
-      "src": "/images/gallery/food-4.jpg",
-      "alt": "Vegetarian thali platter",
-      "category": "food"
-    }
+    { "id": 1, "src": "/images/dishes/baingan_bharta.jpg", "alt": "Baingan Bharta", "category": "food" },
+    { "id": 2, "src": "/images/dishes/beef_vindaloo.jpg", "alt": "Beef Vindaloo", "category": "food" },
+    { "id": 3, "src": "/images/dishes/chaat_papri.jpg", "alt": "Chaat Papri", "category": "food" },
+    { "id": 4, "src": "/images/dishes/chana_masala.jpg", "alt": "Chana Masala", "category": "food" },
+    { "id": 5, "src": "/images/dishes/chicken_biryani.jpg", "alt": "Chicken Biryani", "category": "food" },
+    { "id": 6, "src": "/images/dishes/gulab_jamun.jpg", "alt": "Gulab Jamun", "category": "food" },
+    { "id": 7, "src": "/images/dishes/home_style_chicken_curry.jpg", "alt": "Home Style Chicken Curry", "category": "food" },
+    { "id": 8, "src": "/images/dishes/koshaa_special_butter_chicken.jpg", "alt": "Koshaa Special Butter Chicken", "category": "food" },
+    { "id": 9, "src": "/images/dishes/koshaa_special_dal.jpg", "alt": "Koshaa Special Dal", "category": "food" },
+    { "id": 10, "src": "/images/dishes/lamb_korma.jpg", "alt": "Lamb Korma", "category": "food" },
+    { "id": 11, "src": "/images/dishes/lamb_seekh_kebab.jpg", "alt": "Lamb Seekh Kebab", "category": "food" },
+    { "id": 12, "src": "/images/dishes/mango_chutney.jpg", "alt": "Mango Chutney", "category": "food" },
+    { "id": 13, "src": "/images/dishes/masala_fries.jpg", "alt": "Masala Fries", "category": "food" },
+    { "id": 14, "src": "/images/dishes/olive_kulcha.jpg", "alt": "Olive Kulcha", "category": "food" },
+    { "id": 15, "src": "/images/dishes/pakoda.jpg", "alt": "Pakoda", "category": "food" },
+    { "id": 16, "src": "/images/dishes/paneer_makhani.jpg", "alt": "Paneer Makhani", "category": "food" },
+    { "id": 17, "src": "/images/dishes/paneer_tikka_masala.jpg", "alt": "Paneer Tikka Masala", "category": "food" },
+    { "id": 18, "src": "/images/dishes/papadum.jpg", "alt": "Papadum", "category": "food" },
+    { "id": 19, "src": "/images/dishes/ras_malai.jpg", "alt": "Ras Malai", "category": "food" },
+    { "id": 20, "src": "/images/dishes/samosa.jpg", "alt": "Samosa", "category": "food" },
+    { "id": 21, "src": "/images/dishes/tandoori_chicken_wings.jpg", "alt": "Tandoori Chicken Wings", "category": "food" },
+    { "id": 22, "src": "/images/dishes/tandoori_roti.jpg", "alt": "Tandoori Roti", "category": "food" }
   ],
   "banner": {
     "enabled": true,
-    "image": "/images/banner/special-offer.svg",
+    "image": "/images/banner/special-offer.jpg",
     "alt": "Special Offer - Get 20% off on your first order!"
+  },
+  "footer": {
+    "description": "Experience authentic Indian cuisine with a modern twist.",
+    "social": {
+      "instagram": ""
+    }
+  },
+  "googleReviews": {
+    "url": "https://www.google.com/maps/place/Koshaa+Fine+Indian+Cuisine/@43.6176168,-79.4872056,17z/data=!3m1!5s0x882b361963d393bb:0x47d8d31dae5f4781!4m17!1m8!3m7!1s0x882b3749a4d3c89d:0xa071ef1a1fe29df9!2sKoshaa+Fine+Indian+Cuisine!8m2!3d43.6176713!4d-79.4874803!10e1!16s%2Fg%2F11rkgj1y9d!3m7!1s0x882b3749a4d3c89d:0xa071ef1a1fe29df9!8m2!3d43.6176713!4d-79.4874803!9m1!1b1!16s%2Fg%2F11rkgj1y9d?entry=ttu",
+    "label": "View all reviews on Google"
   }
 }

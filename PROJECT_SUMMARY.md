@@ -92,15 +92,13 @@ koshaa-indian.github.io/
 │   ├── reservation-form.tsx   # Reservation form
 │   ├── theme-provider.tsx     # Theme context
 │   ├── theme-toggle.tsx       # Dark mode toggle
-│   ├── structured-data.tsx    # Schema.org data
-│   └── service-worker-registration.tsx
+│   └── structured-data.tsx    # Schema.org data
 ├── data/
 │   └── content.json           # All site content
 ├── lib/
 │   └── utils.ts               # Utility functions
 ├── public/
 │   ├── manifest.json          # PWA manifest
-│   ├── sw.js                  # Service worker
 │   ├── icon-192.svg           # App icon (192x192)
 │   └── icon-512.svg           # App icon (512x512)
 ├── CLOUDFLARE_WORKER_SETUP.md # Reservation setup guide
@@ -126,7 +124,6 @@ All components are modular, reusable, and follow React best practices.
 - Static site generation for instant page loads
 - Optimized images with Next.js Image component
 - Minimal JavaScript bundle
-- Efficient caching strategy
 
 ### Accessibility
 - All interactive elements keyboard accessible
