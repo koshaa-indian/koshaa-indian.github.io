@@ -21,8 +21,9 @@ export function Header() {
   ]
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/"
-    return pathname === href
+    // Normalize for trailingSlash: true (pathname can be "/about/" while href is "/about")
+    const norm = (p: string) => (p === "/" ? p : p.replace(/\/$/, ""))
+    return norm(pathname) === norm(href)
   }
 
   return (
@@ -51,7 +52,7 @@ export function Header() {
               <Link
                 href="/reservation"
                 className={cn(
-                  pathname === "/reservation" && "ring-2 ring-primary ring-offset-2 ring-offset-background"
+                  isActive("/reservation") && "ring-2 ring-primary ring-offset-2 ring-offset-background"
                 )}
               >
                 Reserve Table
