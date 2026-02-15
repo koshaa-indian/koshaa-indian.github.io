@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { X } from "lucide-react"
-import Image from "next/image"
 import { Button } from "./ui/button"
 
 interface BannerPopoverProps {
@@ -77,10 +76,9 @@ export function BannerPopover({ banner }: BannerPopoverProps) {
         aria-hidden="true"
       />
 
-      {/* Banner Content */}
-      <div className="relative z-[102] mx-4 max-w-2xl animate-in fade-in zoom-in-95 duration-300">
+      {/* Banner Content - centered, image fits within viewport */}
+      <div className="relative z-[102] mx-4 flex max-h-[90vh] max-w-4xl animate-in fade-in zoom-in-95 duration-300 items-center justify-center">
         <div className="relative overflow-hidden rounded-lg bg-background shadow-2xl">
-          {/* Close Button */}
           <Button
             variant="ghost"
             size="icon"
@@ -90,21 +88,13 @@ export function BannerPopover({ banner }: BannerPopoverProps) {
           >
             <X className="h-4 w-4" />
           </Button>
-
-          {/* Banner Image */}
-          <div className="relative aspect-video w-full">
-            <Image
-              src={banner.image}
-              alt={banner.alt}
-              fill
-              className="object-cover"
-              priority
-              onError={() => {
-                // Close banner if image fails to load
-                handleClose()
-              }}
-            />
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element -- native img for reliable banner display with static export */}
+          <img
+            src={banner.image}
+            alt={banner.alt}
+            className="max-h-[85vh] max-w-full object-contain"
+            onError={() => handleClose()}
+          />
         </div>
       </div>
     </div>

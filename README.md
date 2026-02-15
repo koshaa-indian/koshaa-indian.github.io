@@ -78,8 +78,7 @@ To set up the Cloudflare Worker:
 ├── data/                 # JSON content files
 ├── lib/                  # Utility functions
 ├── public/               # Static assets
-│   ├── manifest.json    # PWA manifest
-│   └── sw.js            # Service worker
+│   └── manifest.json    # PWA manifest
 └── next.config.ts       # Next.js configuration
 ```
 

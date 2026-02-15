@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import { StructuredData } from "@/components/structured-data";
 import contentData from "@/data/content.json";
 
@@ -27,22 +26,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const themeName = (contentData as { theme?: { name?: string } }).theme?.name ?? "Koshaa";
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="theme-koshaa" data-theme-name={themeName} suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#fb923c" />
+        <meta name="theme-color" content="#c9a227" />
         <StructuredData />
       </head>
       <body className="font-sans antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

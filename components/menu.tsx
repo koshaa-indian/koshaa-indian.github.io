@@ -63,7 +63,7 @@ export function Menu({ menu }: MenuProps) {
                         <div className="flex items-center gap-2">
                           <h4 className="font-semibold">{item.name}</h4>
                           {item.popular && (
-                            <span className="rounded-full bg-orange-100 px-2 py-0.5 text-xs font-medium text-orange-800 dark:bg-orange-900 dark:text-orange-200">
+                            <span className="rounded-full bg-primary/15 px-2 py-0.5 text-xs font-medium text-primary">
                               Popular
                             </span>
                           )}
@@ -89,7 +89,7 @@ export function Menu({ menu }: MenuProps) {
                           )}
                         </div>
                       </div>
-                      <div className="ml-4 flex-shrink-0 font-semibold text-orange-600 dark:text-orange-400">
+                      <div className="ml-4 flex-shrink-0 font-semibold text-primary">
                         ${item.price.toFixed(2)}
                       </div>
                     </div>

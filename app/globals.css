@@ -45,6 +45,30 @@
     --input: 240 3.7% 15.9%;
     --ring: 24 100% 50%;
   }
+
+  /* Koshaa theme: golden on dark (logo + cover). Currently applied. */
+  .theme-koshaa {
+    --background: 0 0% 6%;
+    --foreground: 40 15% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 40 15% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 15% 95%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 40 15% 95%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 10% 55%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 40 15% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 43 74% 49%;
+    --radius: 0.5rem;
+  }
 }
 
 @layer base {
@@ -56,6 +80,22 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+}
+
+@layer components {
+  .container {
+    margin-inline: auto;
+  }
+
+  /* Hero cover: on mobile, crop so the main dish stays in frame (vertical viewports) */
+  .hero-cover-image {
+    object-position: center 38%;
+  }
+  @media (min-width: 640px) {
+    .hero-cover-image {
+      object-position: center center;
+    }
   }
 }
 

@@ -4,8 +4,8 @@
   "description": "Experience authentic Indian cuisine at Koshaa. Fresh ingredients, traditional recipes, and exceptional service.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#fb923c",
+  "background_color": "#0f0f0f",
+  "theme_color": "#c9a227",
   "orientation": "portrait-primary",
   "icons": [
     {

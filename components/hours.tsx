@@ -13,7 +13,7 @@ export function Hours({ hours }: HoursProps) {
   return (
     <div className="rounded-lg bg-background p-6 shadow-sm">
       <div className="mb-4 flex items-center gap-2">
-        <Clock className="h-5 w-5 text-orange-600 dark:text-orange-400" />
+        <Clock className="h-5 w-5 text-primary" />
         <h3 className="text-xl font-semibold">Hours of Operation</h3>
       </div>
       <div className="space-y-2">

@@ -38,7 +38,7 @@ export function Gallery({ gallery }: GalleryProps) {
               onClick={() => setFilter(category)}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                 filter === category
-                  ? "bg-orange-600 text-white"
+                  ? "bg-primary text-primary-foreground"
                   : "bg-muted hover:bg-muted/80"
               }`}
               aria-pressed={filter === category}
@@ -55,7 +55,7 @@ export function Gallery({ gallery }: GalleryProps) {
               className="group relative aspect-square overflow-hidden rounded-lg bg-muted"
             >
               {/* Placeholder for images with lazy loading */}
-              <div className="flex h-full items-center justify-center bg-gradient-to-br from-orange-100 to-amber-100 dark:from-orange-950 dark:to-amber-950">
+              <div className="flex h-full items-center justify-center bg-muted">
                 <span className="text-sm text-muted-foreground">{item.alt}</span>
               </div>
               <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100">
