@@ -5,6 +5,7 @@ import Image from "next/image";
 import { X } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { PageHeader } from "@/components/page-header";
 import contentData from "@/data/content.json";
 
 type GalleryItem = (typeof contentData.gallery)[number];
@@ -27,19 +28,7 @@ export default function GalleryPage() {
     <>
       <Header />
       <main id="main-content" className="pt-16">
-        {/* Page header */}
-        <section className="border-b border-border/50 bg-muted/20 py-8 md:py-10">
-          <div className="container px-4">
-            <div className="mx-auto max-w-2xl text-center">
-              <h1 className="mb-2 text-3xl font-semibold tracking-tight md:text-4xl">
-                {pages.gallery.title}
-              </h1>
-              <p className="text-base text-muted-foreground md:text-lg">
-                {pages.gallery.subtitle}
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHeader title={pages.gallery.title} subtitle={pages.gallery.subtitle} />
 
         <section className="flex justify-center py-12">
           <div className="container w-full px-4">

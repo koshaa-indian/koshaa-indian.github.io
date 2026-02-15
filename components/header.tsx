@@ -2,11 +2,14 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "./ui/button"
+import { cn } from "@/lib/utils"
 
 export function Header() {
+  const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navigation = [
@@ -14,7 +17,13 @@ export function Header() {
     { name: "About", href: "/about" },
     { name: "Menu", href: "/menu" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/contact" },
   ]
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/"
+    return pathname === href
+  }
 
   return (
     <>
@@ -30,13 +39,23 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-foreground/90 transition-colors hover:text-primary"
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  isActive(item.href) ? "text-primary" : "text-foreground/90"
+                )}
               >
                 {item.name}
               </Link>
             ))}
             <Button asChild size="sm">
-              <Link href="/reservation">Reserve Table</Link>
+              <Link
+                href="/reservation"
+                className={cn(
+                  pathname === "/reservation" && "ring-2 ring-primary ring-offset-2 ring-offset-background"
+                )}
+              >
+                Reserve Table
+              </Link>
             </Button>
           </div>
 
@@ -66,7 +85,10 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-foreground/90 hover:text-primary"
+                  className={cn(
+                    "block px-3 py-2 text-base font-medium transition-colors hover:text-primary",
+                    isActive(item.href) ? "text-primary" : "text-foreground/90"
+                  )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

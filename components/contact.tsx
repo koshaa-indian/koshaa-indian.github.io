@@ -2,6 +2,7 @@ import Link from "next/link"
 import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react"
 import { Button } from "./ui/button"
 import { SocialLinks } from "./social-links"
+import { SectionHeading } from "./section-heading"
 import contentData from "@/data/content.json"
 
 const MAP_EMBED_URL =
@@ -27,9 +28,11 @@ interface ContactProps {
       instagram?: string
     }
   }
+  /** Set to false when used on the dedicated Contact page (heading is in PageHeader). */
+  showHeading?: boolean
 }
 
-export function Contact({ restaurant }: ContactProps) {
+export function Contact({ restaurant, showHeading = true }: ContactProps) {
   const { pages } = contentData
   const contact = pages.contact
   const addressLine = [
@@ -40,14 +43,13 @@ export function Contact({ restaurant }: ContactProps) {
   return (
     <section id="contact" className="scroll-mt-16 py-12 sm:py-16 lg:py-20">
       <div className="container w-full max-w-5xl px-4 sm:px-6">
-        <header className="mb-8 text-center sm:mb-10">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            {contact.title}
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-            {contact.subtitle}
-          </p>
-        </header>
+        {showHeading && (
+          <SectionHeading
+            title={contact.title}
+            subtitle={contact.subtitle}
+            align="center"
+          />
+        )}
 
         <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:gap-8">
           {/* Map first on mobile for immediate context */}

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Star, ExternalLink } from "lucide-react"
 import { Button } from "./ui/button"
+import { SectionHeading } from "./section-heading"
 
 interface Testimonial {
   id: number
@@ -24,12 +25,12 @@ export function Testimonials({ testimonials, googleReviews }: TestimonialsProps)
   return (
     <section id="testimonials" className="flex justify-center bg-muted/50 py-12 sm:py-20">
       <div className="container w-full px-4">
-        <div className="mb-8 flex flex-col items-center text-center sm:mb-12">
-          <h2 className="mb-3 text-2xl font-bold sm:mb-4 sm:text-3xl md:text-4xl">What Our Customers Say</h2>
-          <p className="mx-auto max-w-2xl text-sm text-muted-foreground sm:text-base md:text-lg">
-            Don&apos;t just take our word for it - hear from our satisfied customers
-          </p>
-        </div>
+        <SectionHeading
+          title="What Our Customers Say"
+          subtitle="Don't just take our word for it — hear from our satisfied customers"
+          align="center"
+          className="mb-8 sm:mb-12"
+        />
 
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial) => (
