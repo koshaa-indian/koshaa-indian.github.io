@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { PageHeader } from "@/components/page-header";
+import { SectionHeading } from "@/components/section-heading";
 import contentData from "@/data/content.json";
 
 export const metadata = {
@@ -50,19 +52,7 @@ export default function AboutPage() {
     <>
       <Header />
       <main id="main-content" className="pt-16">
-        {/* Page header */}
-        <section className="border-b border-border/50 bg-muted/20 py-8 md:py-10">
-          <div className="container px-4">
-            <div className="mx-auto max-w-2xl text-center">
-              <h1 className="mb-2 text-3xl font-semibold tracking-tight md:text-4xl">
-                {about.title}
-              </h1>
-              <p className="text-base text-muted-foreground md:text-lg">
-                {about.subtitle}
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHeader title={about.title} subtitle={about.subtitle} />
 
         {/* About the Restaurant */}
         <section className="py-16 md:py-24" aria-labelledby="about-restaurant-heading">
@@ -70,13 +60,11 @@ export default function AboutPage() {
             <div className="mx-auto max-w-5xl">
               <div className="grid gap-12 md:grid-cols-2 md:gap-16 md:items-center">
                 <div className="order-2 md:order-1">
-                  <h2
+                  <SectionHeading
                     id="about-restaurant-heading"
-                    className="mb-6 text-2xl font-semibold tracking-tight text-primary md:text-3xl"
-                  >
-                    {restaurantSection.heading}
-                  </h2>
-                  <p className="mb-6 text-muted-foreground leading-relaxed">
+                    title={restaurantSection.heading}
+                  />
+                  <p className="-mt-2 mb-6 text-muted-foreground leading-relaxed">
                     {restaurantSection.intro}
                   </p>
                   <div className="rounded-xl border border-primary/30 bg-primary/5 p-6 md:p-8">
@@ -133,13 +121,11 @@ export default function AboutPage() {
                   />
                 </div>
                 <div>
-                  <h2
+                  <SectionHeading
                     id="about-chef-heading"
-                    className="mb-2 text-2xl font-semibold tracking-tight text-primary md:text-3xl"
-                  >
-                    {chefSection.heading}
-                  </h2>
-                  <p className="mb-6 text-lg font-medium text-foreground">
+                    title={chefSection.heading}
+                  />
+                  <p className="-mt-6 mb-6 text-lg font-medium text-foreground">
                     {chefSection.name} — {chefSection.role}
                   </p>
                   <p className="mb-4 text-muted-foreground leading-relaxed">
